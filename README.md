@@ -1,8 +1,8 @@
 # OpenCart Clean SEO for 2.1
 
-Original version of OpenCart dont fully support seo url even 2.1? 
+Original version of OpenCart doesn't fully support seo url? 
 
-WTF? A patch charges $20 USD?! Fuck it!
+WTF? A patch charges $20 USD?! 
 
 ```
 http://example.com/opencart/index.php?route=account/register
