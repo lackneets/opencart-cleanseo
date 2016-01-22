@@ -45,8 +45,8 @@ class ControllerCommonSeoUrl extends Controller {
 						$this->request->get['route'] = $query->row['query'];
 					}
 				} else {
-					$this->request->get['route'] = 'error/not_found';
-
+					// $this->request->get['route'] = 'error/not_found';
+					$this->request->get['route'] = $this->request->get['_route_'];
 					break;
 				}
 			}
@@ -125,7 +125,8 @@ class ControllerCommonSeoUrl extends Controller {
 
 			return $url_info['scheme'] . '://' . $url_info['host'] . (isset($url_info['port']) ? ':' . $url_info['port'] : '') . str_replace('/index.php', '', $url_info['path']) . $url . $query;
 		} else {
-			return $link;
+			// return $link;
+			return preg_replace('/index\.php\?route\=/', '', $link);
 		}
 	}
 }
